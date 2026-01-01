@@ -1,0 +1,151 @@
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-4);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.item {
+  position: relative;
+  padding-bottom: var(--spacing-8);
+  padding-left: var(--spacing-6);
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  top: var(--spacing-6);
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border);
+  transform: translateX(calc(var(--spacing-4) - 1px));
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--muted-foreground);
+  z-index: 1;
+  transform: translateX(calc(var(--spacing-4) - 1rem));
+}
+
+.typeCheckin {
+  background-color: color-mix(in srgb, var(--primary) 10%, var(--background));
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.typeBorrow {
+  background-color: color-mix(in srgb, var(--info) 10%, var(--background));
+  border-color: var(--info);
+  color: var(--info);
+}
+
+.typeLend {
+  background-color: color-mix(in srgb, var(--warning) 10%, var(--background));
+  border-color: var(--warning);
+  color: var(--warning-foreground);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.date {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-family-monospace);
+}
+
+.card {
+  background-color: var(--surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform var(--animation-duration-fast);
+}
+
+.card:hover {
+  transform: translateX(4px);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-12);
+  color: var(--muted-foreground);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+}
+
+.emptySub {
+  font-size: 0.875rem;
+  margin-top: var(--spacing-2);
+}
+
+/* Skeletons */
+.dotSkeleton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--muted);
+  z-index: 1;
+  transform: translateX(calc(var(--spacing-4) - 1rem));
+}
+
+.dateSkeleton {
+  width: 8rem;
+  height: 1rem;
+  margin-bottom: var(--spacing-2);
+}
+
+.cardSkeleton {
+  background-color: var(--surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.titleSkeleton {
+  width: 60%;
+  height: 1.25rem;
+}
+
+.subtitleSkeleton {
+  width: 40%;
+  height: 1rem;
+}

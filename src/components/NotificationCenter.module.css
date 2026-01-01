@@ -1,0 +1,310 @@
+.bellButton {
+  position: relative;
+  color: var(--muted-foreground);
+}
+
+.bellButton:hover {
+  color: var(--foreground);
+  background-color: var(--surface);
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--error);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid var(--background);
+}
+
+.popoverContent {
+  width: 360px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 100px;
+  max-height: 400px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.item:hover {
+  background-color: var(--surface);
+}
+
+.item.unread {
+  background-color: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+
+.unreadDot {
+  position: absolute;
+  top: var(--spacing-4);
+  left: var(--spacing-2);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.itemContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: var(--spacing-2); /* Space for dot */
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--foreground);
+}
+
+.timeAgo {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.itemMessage {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.itemLink {
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.itemLink:hover {
+  text-decoration: underline;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8);
+  color: var(--muted-foreground);
+  gap: var(--spacing-2);
+}
+
+.emptyIcon {
+  opacity: 0.3;
+}
+
+.loadingState {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.skeletonItem {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.skeletonAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skeletonContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skeletonTitle {
+  height: 14px;
+  width: 60%;
+}
+
+.skeletonText {
+  height: 12px;
+  width: 90%;
+}
+
+.footer {
+  padding: var(--spacing-2);
+  border-top: 1px solid var(--border);
+  background-color: var(--surface);
+  text-align: center;
+}
+
+.viewAllBtn {
+  width: 100%;
+  color: var(--muted-foreground);
+}
+
+.viewAllBtn:hover {
+  color: var(--foreground);
+}
+
+/* Settings Dialog */
+.dialogContent {
+  max-width: 500px;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
+}
+
+.settingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+.settingInfo {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: flex-start;
+}
+
+.settingIcon {
+  color: var(--muted-foreground);
+  margin-top: 2px;
+}
+
+.settingLabel {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.settingDesc {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  margin: 2px 0 0 0;
+}
+
+.settingControl {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.comingSoon {
+  font-size: 0.65rem;
+  height: 18px;
+  padding: 0 6px;
+}
+
+.timeInputs {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+  padding-left: 34px; /* Align with text */
+  margin-top: -8px;
+}
+
+.timeField {
+  flex: 1;
+}
+
+.timeSeparator {
+  padding-bottom: 10px;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 480px) {
+  .popoverContent {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .listContainer {
+    max-height: none;
+  }
+}
