@@ -1,26 +1,25 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-// Sửa đường dẫn: Thêm /src/ vào trước các folder components và pages
-import { GlobalContextProviders } from "./src/components/_globalcontextproviders.tsx";
-import Page_0 from "./src/pages/admin.tsx";
-import PageLayout_0 from "./src/pages/admin.pageLayout.tsx";
-import Page_1 from "./src/pages/books.tsx";
-import PageLayout_1 from "./src/pages/books.pageLayout.tsx";
-import Page_2 from "./src/pages/login.tsx";
-import PageLayout_2 from "./src/pages/login.pageLayout.tsx";
-import Page_3 from "./src/pages/_index.tsx";
-import PageLayout_3 from "./src/pages/_index.pageLayout.tsx";
-import Page_4 from "./src/pages/profile.tsx";
-import PageLayout_4 from "./src/pages/profile.pageLayout.tsx";
-import Page_5 from "./src/pages/activities.tsx";
-import PageLayout_5 from "./src/pages/activities.pageLayout.tsx";
-import Page_6 from "./src/pages/my-journey.tsx";
-import PageLayout_6 from "./src/pages/my-journey.pageLayout.tsx";
-import Page_7 from "./src/pages/books.$bookId.tsx";
-import PageLayout_7 from "./src/pages/books.$bookId.pageLayout.tsx";
-import Page_8 from "./src/pages/admin.activities.$activityId.tsx";
-import PageLayout_8 from "./src/pages/admin.activities.$activityId.pageLayout.tsx";
-
+// Sử dụng đường dẫn trực tiếp từ gốc dự án
+import { GlobalContextProviders } from "/src/components/_globalcontextproviders.tsx";
+import Page_0 from "/src/pages/admin.tsx";
+import PageLayout_0 from "/src/pages/admin.pageLayout.tsx";
+import Page_1 from "/src/pages/books.tsx";
+import PageLayout_1 from "/src/pages/books.pageLayout.tsx";
+import Page_2 from "/src/pages/login.tsx";
+import PageLayout_2 from "/src/pages/login.pageLayout.tsx";
+import Page_3 from "/src/pages/_index.tsx";
+import PageLayout_3 from "/src/pages/_index.pageLayout.tsx";
+import Page_4 from "/src/pages/profile.tsx";
+import PageLayout_4 from "/src/pages/profile.pageLayout.tsx";
+import Page_5 from "/src/pages/activities.tsx";
+import PageLayout_5 from "/src/pages/activities.pageLayout.tsx";
+import Page_6 from "/src/pages/my-journey.tsx";
+import PageLayout_6 from "/src/pages/my-journey.pageLayout.tsx";
+import Page_7 from "/src/pages/books.$bookId.tsx";
+import PageLayout_7 from "/src/pages/books.$bookId.pageLayout.tsx";
+import Page_8 from "/src/pages/admin.activities.$activityId.tsx";
+import PageLayout_8 from "/src/pages/admin.activities.$activityId.pageLayout.tsx";
 if (!window.requestIdleCallback) {
   window.requestIdleCallback = (cb) => {
     setTimeout(cb, 1);
