@@ -1,0 +1,112 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  overflow: hidden;
+  /* Default background if nothing else applies */
+  background-color: var(--surface);
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 280px;
+  }
+}
+
+/* Fallback Gradient - Subtle branded gradient */
+.fallbackGradient {
+  background: linear-gradient(
+    135deg,
+    var(--surface) 0%,
+    color-mix(in srgb, var(--primary) 10%, var(--surface)) 100%
+  );
+  border-bottom: 1px solid var(--border);
+}
+
+/* When image is present */
+.hasImage {
+  background-color: var(--muted); /* Loading placeholder color behind image */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-4);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.2;
+  animation: fadeInUp 500ms ease-out 100ms both;
+}
+
+.subtitle {
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  max-width: 600px;
+  animation: fadeInUp 500ms ease-out 300ms both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 
+   If we have an image, text needs to be white for contrast against the dark overlay.
+   If we are using the fallback gradient, we stick to theme colors (dark text on light bg).
+*/
+.hasImage .title {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hasImage .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+  border-radius: 0; /* Skeleton fills the container which has radius */
+}

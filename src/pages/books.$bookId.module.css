@@ -1,0 +1,79 @@
+.page {
+  padding-bottom: var(--spacing-16);
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+  width: 100%;
+}
+
+.header {
+  padding: var(--spacing-6) 0;
+}
+
+.backButton {
+  color: var(--muted-foreground);
+  padding-left: 0;
+}
+
+.backButton:hover {
+  color: var(--foreground);
+  background-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.sidebar {
+  position: relative;
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: var(--spacing-6);
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--spacing-4);
+  text-align: center;
+  padding: var(--spacing-4);
+}
+
+.errorIcon {
+  color: var(--error);
+  opacity: 0.8;
+}
+
+.errorContainer h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.errorContainer p {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.backLinkSkeleton {
+  margin: var(--spacing-6) 0;
+}

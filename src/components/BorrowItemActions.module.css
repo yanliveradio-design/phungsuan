@@ -1,0 +1,35 @@
+.actions {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-1);
+}
+
+.reportBtn {
+  margin-left: auto;
+  color: var(--muted-foreground);
+}
+
+.reportBtn:hover {
+  color: var(--error);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.select {
+  padding: var(--spacing-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--card);
+  color: var(--foreground);
+}

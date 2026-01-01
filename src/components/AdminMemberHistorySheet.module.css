@@ -1,0 +1,148 @@
+.sheetContent {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sheetHeader {
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.sheetUserHeader {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+}
+
+.sheetAvatar {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--border);
+}
+
+.sheetMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-2);
+}
+
+.titlesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.sheetBody {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: var(--spacing-4);
+}
+
+.tabs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsList {
+  margin-bottom: var(--spacing-4);
+}
+
+.tabContent {
+  flex: 1;
+  outline: none;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.historyItem {
+  padding: var(--spacing-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-1);
+}
+
+.historyAction {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.historyDate {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-family-monospace);
+}
+
+.historyNote {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: var(--spacing-1) 0;
+  font-style: italic;
+}
+
+.historyActor {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-2);
+  border-top: 1px dashed var(--border);
+  padding-top: var(--spacing-1);
+}
+
+.simpleTableWrapper {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.simpleTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.simpleTable th {
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--surface);
+  color: var(--muted-foreground);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+.simpleTable td {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.simpleTable tr:last-child td {
+  border-bottom: none;
+}
+
+.miniBadge {
+  font-size: 0.7rem;
+  height: 1.25rem;
+  padding: 0 var(--spacing-2);
+}

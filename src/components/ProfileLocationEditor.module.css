@@ -1,0 +1,83 @@
+.container {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.icon {
+  color: var(--primary);
+}
+
+.editButton {
+  color: var(--muted-foreground);
+}
+
+.editButton:hover {
+  color: var(--primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formItem {
+  margin-bottom: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.display {
+  padding: var(--spacing-2) 0;
+}
+
+.locationText {
+  font-size: 1rem;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.emptyText {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  font-style: italic;
+  margin: 0;
+}

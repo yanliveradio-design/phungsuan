@@ -1,0 +1,102 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-8) var(--spacing-4);
+  min-height: 80vh;
+}
+
+.header {
+  margin-bottom: var(--spacing-6);
+}
+
+.backButton {
+  margin-bottom: var(--spacing-4);
+  padding-left: 0;
+  color: var(--muted-foreground);
+}
+
+.backButton:hover {
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.titleSkeleton {
+  width: 300px;
+  height: 2.5rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.tabsListWrapper {
+  border-bottom: 1px solid var(--border);
+}
+
+.contentArea {
+  min-height: 400px;
+}
+
+.tabContent {
+  animation: fadeIn var(--animation-duration-normal) ease-out;
+}
+
+.placeholderInfo {
+  padding: var(--spacing-8);
+  text-align: center;
+  color: var(--muted-foreground);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+}
+
+/* Table styles moved to AdminActivityRegistrationsTable component */
+
+.error {
+  padding: var(--spacing-8);
+  text-align: center;
+  color: var(--error);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-4) var(--spacing-2);
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}
