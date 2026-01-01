@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { GlobalContextProviders } from "./components/_globalContextProviders.tsx";
+import { GlobalContextProviders } from "./components/_globalcontextproviders.tsx";
 import Page_0 from "./pages/admin.tsx";
 import PageLayout_0 from "./pages/admin.pageLayout.tsx";
 import Page_1 from "./pages/books.tsx";
