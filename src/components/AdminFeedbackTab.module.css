@@ -1,0 +1,273 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.filters {
+  display: flex;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  min-width: 240px;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.tableContainer {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--card);
+  margin-top: var(--spacing-4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  padding: var(--spacing-3) var(--spacing-4);
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: var(--surface);
+}
+
+.anonymous {
+  color: var(--muted-foreground);
+}
+
+.activityCell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topicCell {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+}
+
+.topicArrow {
+  color: var(--muted-foreground);
+}
+
+.displayTopic {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.ratingCell {
+  text-align: center;
+}
+
+.stars {
+  color: var(--warning);
+  font-size: 1rem;
+}
+
+.commentCell {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badges {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.loadingState {
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.topicsSection {
+  margin-top: var(--spacing-8);
+  padding: var(--spacing-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: var(--card);
+}
+
+.topicsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.topicsTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.topicsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.topicChip {
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.feedbackDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-2);
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.detailColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.commentText {
+  color: var(--foreground);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.aiReason {
+  color: var(--warning);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: var(--spacing-2);
+  background-color: var(--surface);
+  border-radius: var(--radius);
+}
+
+.retagContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.currentTopic {
+  color: var(--muted-foreground);
+}
+
+.topicSelect {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.875rem;
+  }
+
+  .table th,
+  .table td {
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filterItem {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topicsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+  }
+}
