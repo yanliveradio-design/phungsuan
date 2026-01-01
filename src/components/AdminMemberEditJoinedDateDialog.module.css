@@ -1,9 +1,0 @@
-.smallDialog {
-  max-width: 360px;
-}
-
-.calendarWrapper {
-  display: flex;
-  justify-content: center;
-  padding: var(--spacing-2) 0;
-}
